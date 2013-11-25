@@ -28,10 +28,13 @@ $(function(){
 
 
 
-         alert(newCartItem.type.val());
+        // alert(newCartItem.type.val());
 
         //push the new item on to the items array
         cart.items.push(newCartItem);
+
+        //alert(newCartItem.price.val());
+        // WHY IS newCartItem NULLLL????????
 
         //render the cart's contents to the element
         //we're using to contain the cart information
@@ -39,6 +42,8 @@ $(function(){
         //other grouping element on the page that has a
         //style class of 'cart-container'
         renderCart(cart, $('.cart-container'));
+
+        //alert(newCartItem.price.val());
     });
 
     $('.place-order').click(function(){
@@ -69,8 +74,24 @@ function renderCart(cart, container) {
     for (idx = 0; idx < cart.items.length; ++idx) {
         item = cart.items[idx];
 
+        if(item.type = "pizza") {
         //TODO: code to render the cart item
+            container.find('.price').html(item.price);
+            container.find('.type').html(item.type);
+            container.find('.size').html(item.size);
+            container.find('.name').html(item.name);
+        }
 
+        else if(item.type = "dessert") {
+            container.find('.name').html(item.name);
+            container.find('.price').html(item.price);
+        }
+
+        else {
+            container.find('.name').html(item.name);
+            container.find('.price').html(item.price);
+        }
+     
     } //for each cart item
 
     //TODO: code to render sub-total price of the cart

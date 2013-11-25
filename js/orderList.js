@@ -22,6 +22,21 @@ function renderPizza(entries) {
         // clone.find('.prices').html("$" + this.prices[0] + "/$" +
         //                           this.prices[1] + "/$" + this.prices[2]);
         clone.find('.price1').html("$" + this.prices[0]);
+        //clone.find('.data-price').html(this.prices[0]);
+
+        document.getElementById("small").setAttribute("data-type", this.prices[0]);
+        document.getElementById("med").setAttribute("data-type", this.prices[1]);
+        document.getElementById("big").setAttribute("data-type", this.prices[2]);
+
+        document.getElementById("small").setAttribute("data-name", this.name);
+        document.getElementById("med").setAttribute("data-name", this.name);
+        document.getElementById("big").setAttribute("data-name", this.name);
+
+        document.getElementById("small").setAttribute("data-size", "12");
+        document.getElementById("med").setAttribute("data-size", "14");
+        document.getElementById("big").setAttribute("data-size", "17");
+
+
         clone.find('.price2').html("$" + this.prices[1]);
         clone.find('.price3').html("$" + this.prices[2]);
 
