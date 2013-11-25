@@ -1,0 +1,301 @@
+@import url(reset.css);
+@import url(http://fonts.googleapis.com/css?family=Radley);
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+body {
+	background-image: url(../img/grunge.jpg);
+	background-repeat: repeat;
+}
+
+.head {
+	background-image: url(../img/concrete_wall_3.png);
+	text-align: center;
+	margin: 50px;
+	margin-bottom: 0px;
+}
+
+p.header {
+	font-size: 300%;
+	font-weight: bolder;
+	color: #565755;
+	text-shadow: 1px 1px 2px #000;
+	padding: 10px;
+	padding-top: 5px;
+}
+
+a:focus {
+	background-color: #FFF700;
+}	
+
+.col {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+
+.row {
+	clear: both;
+	/*min-width: 50px;*/
+}
+
+.time {
+	color: #8E8F8C;
+	padding-bottom: 5px;
+	font-family: 'Calibri', serif;
+}
+
+.logo {
+	width: 80%;
+}
+
+nav {
+	background-color: #4F1887;
+	color: #FFF;
+	text-align: center;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	padding: 5px;
+	color: #FFF;
+	font-weight: bolder;
+	font-size: 140%;
+	font-family: 'Calibri', serif;
+}
+
+nav a:link,
+nav a:visited {
+	text-decoration: none;
+}
+
+nav a:hover {
+	background-color: #A2A3A0;
+	border-radius: 30px;
+}
+
+.nav {
+	background-color: #4F1887;
+	padding: 10px;
+	margin: 50px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+div.description {
+	text-align: center;
+	color: #FFF;
+	background-color: #565755;
+	padding: 20px;
+	/*padding-left: 80px;*/
+	/*padding-right: 80px;*/
+	font-family: 'Varela Round', sans-serif;
+	margin-left: 0 px;
+	margin-right: 50px;
+	font-size: 140%;
+}
+
+img.pizza1 {
+	width: 625px;
+	float: right;
+	margin-right: 0px;
+	margin-left: 20px;
+}
+
+.hours {
+	color: #2E2E2D;
+	text-align: center;
+	padding: 15px;
+	background-color: #9E77D6;
+	font-weight: bold; 
+	margin-right: 50px;
+	margin-left: 0px;
+	font-size: 130%;
+	font-family: 'Varela Round', sans-serif;
+}
+
+iframe {
+	float: left;
+	margin-bottom: 100px;
+}
+
+.twitter {
+	width: 5%;
+}
+
+footer {
+	position: fixed;
+	left:0px;
+    bottom:0px;
+	text-align: center;
+	background-image: url(../img/concrete_wall_3.png);
+	font-weight: bold;
+	padding: 0px;
+	margin: 50px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	clear: both;
+	font-family: 'Calibri', serif;
+	opacity: .8;
+	padding-left: 500px;
+	padding-right: 500px;
+}
+
+
+a.e-mail:link,
+a.email:visited {
+	text-decoration: none;
+}
+
+header {
+	padding: 10px;
+	padding-left: 0px;
+	font-size: 200%;
+	font-family: 'Varela Round', sans-serif;
+	font-weight: bold;
+}
+
+div.content {
+	margin: 50px;
+	background-image: url(../img/mooning.png);
+	padding: 10px;
+}
+
+h1 {
+	font-size: 150%;
+	/*text-shadow: 1px 1px 2px #000;*/
+	color: #2E2E2D;
+	border: 5px dotted #FFF;
+	background-image: url(../img/smooth_wall.png);
+	margin-bottom: 10px;
+	font-family: 'Calibri', serif;
+	clear: both;
+}
+
+h2 {
+	font-size: 130%;
+	margin: 10px;
+	text-align: center;
+	color: #4E5951;
+}
+
+.about {
+	padding-bottom: 10px;
+	font-family: 'Calibri', serif;
+	font-size: 110%;
+	text-indent: 50px;
+}
+
+section p:first-of-type:first-letter {
+	font-size: 200%;
+	font-family: 'Georgia', serif;
+	color: #4F1887;
+	margin-right: 0px;
+}
+
+dt {
+	font-size: 120%;
+	/*border-bottom:2px solid #7E8F81;*/
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-color: #2E2E2D;
+}
+
+dd {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 90%;
+	margin-bottom: 10px;
+}
+
+span.name {
+	font-size: 120%;
+	color: #4F1887;
+	font-weight: bold;
+	font-family: 'Varela Round', sans-serif;
+	
+}
+
+span.prices {
+	color: black;
+	font-style: italic;
+	font-size: 110%
+
+}
+
+
+p.pizzaPrice {
+	padding-bottom: 10px;
+}
+
+span.description {
+	font-size: 90%;
+	margin-bottom: 10px;
+	
+	color: #565755;
+}
+
+.des {
+	font-size: 120%;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	color: #2E2E2D;
+}
+
+li {
+	font-family: 'Varela Round', sans-serif;
+	color: #4F1887;
+	font-style: bold;
+	margin-bottom: 5px;
+}
+
+.oven {
+	width: 20%;
+	float: right;
+	margin-left: 10px;
+}
+
+img.order {
+	float: right;
+	width: 16%;
+}
+
+
+
+@media (max-width: 767px) {
+	img.pizza1 {
+		width: 86%;
+		float: left;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+	div.description {
+		clear: both;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+	iframe {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+	.hours {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
+	.col {
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+
+	footer {
+		padding-left: 150px;
+		padding-right: 150px;
+	}
+
+}
