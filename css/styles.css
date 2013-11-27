@@ -261,6 +261,39 @@ img.order {
 	width: 16%;
 }
 
+.priceItem {
+	margin: 5px;
+	color: #4F1887;
+	font-weight: bold;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.sizeItem {
+	margin: 5px;
+	color: #4F1887;
+	font-weight: bold;
+	font-family: 'Varela Round', sans-serif;
+}
+
+.nameItem {
+	margin: 5px;
+	font-size: 110%;
+	margin-bottom: 10px;
+	color: #565755;
+}
+
+.typeItem {
+	margin-bottom: 10px;
+	color: #565755;
+}
+
+.hide {
+	visibility:hidden;
+}
+
+.btn-primary {
+	margin-right: 0px;
+}
 
 
 @media (max-width: 767px) {

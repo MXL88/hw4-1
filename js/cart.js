@@ -28,10 +28,23 @@ $(function(){
             price: this.getAttribute('data-price')
         };
 
+
+        $('body').on('click', '.remove-item', function() {
+            var idxToRemove = this.getAttribute('data-index');
+            cart.items.splice(idxToRemove, 1);
+            renderCart(cart, $('.cart-container'));
+        });
+
+        // $('.remove-item').click(function(){
+        //     var idxToRemove = this.getAttribute('data-index');
+        //     cart.items.splice(idxToRemove, 1);
+        //     renderCart(cart, $('.cart-container'));
+        // })
+        
         //push the new item on to the items array
         cart.items.push(newCartItem);
 
-       
+
 
         //render the cart's contents to the element
         //we're using to contain the cart information
@@ -39,6 +52,8 @@ $(function(){
         //other grouping element on the page that has a
         //style class of 'cart-container'
         renderCart(cart, $('.cart-container'));
+
+      
 
     });
 
@@ -76,6 +91,10 @@ function renderCart(cart, container) {
     for (idx = 0; idx < cart.items.length; ++idx) {
         clone = template.clone();
         item = cart.items[idx];
+           
+        
+        $(clone.find('.remove-item')).attr('data-index', idx); 
+    
 
         if(item.type = "pizza") {
         //TODO: code to render the cart item
@@ -84,13 +103,11 @@ function renderCart(cart, container) {
             clone.find('.typeItem').html(item.type);
             clone.find('.sizeItem').html(item.size);
             clone.find('.nameItem').html(item.name);
-
-           // alert("price:" + item.price + " " + "size:" + item.size + " " + "name:" + item.name);
         }
 
          else {
-             container.find('.name').html(item.name);
-             container.find('.price').html(item.price);
+            clone.find('.name').html(item.name);
+            clone.find('.price').html(item.price);
         }
 
         $('.cart-container').append(clone);
