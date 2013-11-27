@@ -35,21 +35,21 @@
             <div class="templatePizza">
                 <p class="pizzaName">
                     <span class="name"></span>
-                    <button class="btn btn-info add-to-cart" type="button" id="small"><span class="price1"></button>
+                    <button class="btn btn-info add-to-cart" type="button" id="small" data-type="pizza"><span class="price1"></button>
 
                     <!-- data-type="" data-name="" data-size="" data-price="" -->
-                    <button class="btn btn-info add-to-cart" type="button" id="med"><span class="price2"></span></button>
-                    <button class="btn btn-info add-to-cart" type="button" id="big"><span class="price3"></span></button>
+                    <button class="btn btn-info add-to-cart" type="button" id="med" data-type="pizza"><span class="price2"></span></button>
+                    <button class="btn btn-info add-to-cart" type="button" id="big" data-type="pizza"><span class="price3"></span></button>
                 </p>
                 <p><span class="description"></span></p>
             </div> 
 
              <div class="templateDrinks">
-                <p><span class="name"></span></span></p>
+                <p><span class="name"></span></p>
              </div>
 
             <div class="templateDesserts">
-                <p><span class="name"></span> <span class="prices"></span></p>
+                <p><span class="name"></span> <span class="price"></span></p>
             </div>
 
         <div class="row">
@@ -63,10 +63,16 @@
             </div>
 
             <div class="col col-right">
+                <h1>Cart:</h1>
 
-                <div class="cart-container"><span class="price"></span><span class="type"></span><span class="size"></span><span class="name"></span></div>
+                <div class="cart-container"></div>
 
-                <div class="cart-item-template cart-item row">
+
+                 <div class="templateCart">
+                    <p><span class="priceItem"></span><span class="type"></span><span class="size"></span><span class="name"></span></p>
+                </div>
+
+         <!--        <div class="cart-item-template cart-item row">
                     <div class="col-xs-10">
                         <p><button type="button" class="btn btn-default btn-xs remove-item">&times;</button> 
                             <span class="title"></span> (<span class="formatLabel"></span>)
@@ -77,7 +83,8 @@
                     <div class="col-xs-2 col-price">
                         <p>$<span class="price"></span></p>
                     </div>
-                </div> 
+                </div>  -->
+
             </div> <!-- .col-right -->
         </div> <!-- .row -->    
         <div></div>

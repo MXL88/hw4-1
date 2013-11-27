@@ -24,9 +24,9 @@ function renderPizza(entries) {
         clone.find('.price1').html("$" + this.prices[0]);
         //clone.find('.data-price').html(this.prices[0]);
 
-        document.getElementById("small").setAttribute("data-type", this.prices[0]);
-        document.getElementById("med").setAttribute("data-type", this.prices[1]);
-        document.getElementById("big").setAttribute("data-type", this.prices[2]);
+        document.getElementById("small").setAttribute("data-price", this.prices[0]);
+        document.getElementById("med").setAttribute("data-price", this.prices[1]);
+        document.getElementById("big").setAttribute("data-price", this.prices[2]);
 
         document.getElementById("small").setAttribute("data-name", this.name);
         document.getElementById("med").setAttribute("data-name", this.name);

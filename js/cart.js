@@ -26,10 +26,6 @@ $(function(){
             price: this.getAttribute('data-price')
         };
 
-
-
-        // alert(newCartItem.type.val());
-
         //push the new item on to the items array
         cart.items.push(newCartItem);
 
@@ -53,6 +49,11 @@ $(function(){
         //total order is greater than $20 (see homework 
         //instructions) 
 
+        cart.name = $('.first').val() + " " + $('last').val();
+        cart.address = $('.addr').val();
+        cart.zip = $('.zip').val();
+        cart.phone = $('.phone').val();
+
         postCart(cart, $('.cart-form'));
     });
 
@@ -66,33 +67,40 @@ $(function(){
 //
 function renderCart(cart, container) {
     var idx, item;
-    
+    var template = $('.templateCart');
+    var clone;
     //empty the container of whatever is there currently
     container.empty();
 
     //for each item in the cart...
     for (idx = 0; idx < cart.items.length; ++idx) {
+        clone = template.clone();
         item = cart.items[idx];
 
         if(item.type = "pizza") {
         //TODO: code to render the cart item
-            container.find('.price').html(item.price);
-            container.find('.type').html(item.type);
-            container.find('.size').html(item.size);
-            container.find('.name').html(item.name);
+
+        
+            clone.find('.priceItem').html(item.price);
+            clone.find('.type').html(item.type);
+            clone.find('.size').html(item.size);
+            clone.find('.name').html(item.name);
         }
 
-        else if(item.type = "dessert") {
-            container.find('.name').html(item.name);
-            container.find('.price').html(item.price);
-        }
+        // else if(item.type = "dessert") {
+        //     container.find('.name').html(item.name);
+        //     container.find('.price').html(item.price);
+        // }
 
-        else {
-            container.find('.name').html(item.name);
-            container.find('.price').html(item.price);
-        }
-     
+        // else {
+        //     container.find('.name').val();
+        //     container.find('.price').html(item.price);
+        // }
+        
+        container.append(cart);
     } //for each cart item
+
+
 
     //TODO: code to render sub-total price of the cart
     //the tax amount (see instructions), 
