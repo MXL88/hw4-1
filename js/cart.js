@@ -19,6 +19,8 @@ $(function(){
         //use the attributes on the button to construct
         //a new cart item object that we can add to the
         //cart's items array
+        $('.cart-container').empty();
+
         var newCartItem = {
             type: this.getAttribute('data-type'),
             name: this.getAttribute('data-name'),
@@ -29,8 +31,7 @@ $(function(){
         //push the new item on to the items array
         cart.items.push(newCartItem);
 
-        //alert(newCartItem.price.val());
-        // WHY IS newCartItem NULLLL????????
+       
 
         //render the cart's contents to the element
         //we're using to contain the cart information
@@ -39,7 +40,6 @@ $(function(){
         //style class of 'cart-container'
         renderCart(cart, $('.cart-container'));
 
-        //alert(newCartItem.price.val());
     });
 
     $('.place-order').click(function(){
@@ -80,24 +80,20 @@ function renderCart(cart, container) {
         if(item.type = "pizza") {
         //TODO: code to render the cart item
 
-        
             clone.find('.priceItem').html(item.price);
-            clone.find('.type').html(item.type);
-            clone.find('.size').html(item.size);
-            clone.find('.name').html(item.name);
+            clone.find('.typeItem').html(item.type);
+            clone.find('.sizeItem').html(item.size);
+            clone.find('.nameItem').html(item.name);
+
+           // alert("price:" + item.price + " " + "size:" + item.size + " " + "name:" + item.name);
         }
 
-        // else if(item.type = "dessert") {
-        //     container.find('.name').html(item.name);
-        //     container.find('.price').html(item.price);
-        // }
+         else {
+             container.find('.name').html(item.name);
+             container.find('.price').html(item.price);
+        }
 
-        // else {
-        //     container.find('.name').val();
-        //     container.find('.price').html(item.price);
-        // }
-        
-        container.append(cart);
+        $('.cart-container').append(clone);
     } //for each cart item
 
 
